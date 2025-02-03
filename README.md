@@ -5,7 +5,7 @@ A ComfyUI custom node wrapper for [JoyHallo](https://github.com/jdh-algo/JoyHall
 #### Simple workflow
 ![wrapper 2](https://github.com/user-attachments/assets/9b359cbe-7450-4ba0-b7f3-edbf23f6b8a7)
 
-#### JoyHallow_wrapper + kokoro
+#### JoyHallo_wrapper + kokoro
 ![wraper1](https://github.com/user-attachments/assets/8caa7e6c-5699-4be4-b876-7c43681186f2)
 
 
