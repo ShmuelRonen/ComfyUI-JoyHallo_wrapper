@@ -1,0 +1,537 @@
+{
+  "last_node_id": 16,
+  "last_link_id": 34,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        961.1964111328125,
+        115.55220031738281
+      ],
+      "size": [
+        453.5099792480469,
+        828.51708984375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 26,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 25,
+        "loop_count": 0,
+        "filename_prefix": "joy\\ai",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "ai_00019-audio.mp4",
+            "subfolder": "joy",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "workflow": "ai_00019.png",
+            "fullpath": "E:\\ComfyUI_windows\\ComfyUI\\output\\joy\\ai_00019-audio.mp4"
+          },
+          "muted": false
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": "ImageResizeKJ",
+      "pos": [
+        568.904541015625,
+        383.0049133300781
+      ],
+      "size": [
+        315,
+        266
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "get_image_size",
+          "type": "IMAGE",
+          "link": 27,
+          "shape": 7
+        },
+        {
+          "name": "width_input",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width_input"
+          },
+          "shape": 7
+        },
+        {
+          "name": "height_input",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height_input"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJ"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        true,
+        2,
+        0,
+        0,
+        "disabled"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "ImageScaleBy",
+      "pos": [
+        182.92959594726562,
+        304.8909912109375
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24,
+            27
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "JoyHallo_wrapper",
+      "pos": [
+        567.1307983398438,
+        117.72518920898438
+      ],
+      "size": [
+        313.0254821777344,
+        179.39732360839844
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 34
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            26
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoyHallo_wrapper"
+      },
+      "widgets_values": [
+        20,
+        3.5,
+        true,
+        109,
+        "randomize"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -176.69471740722656,
+        306.32415771484375
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "281c9e6e51bd72280476f553f98541c3.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PreviewAudio",
+      "pos": [
+        162.71485900878906,
+        10.54614543914795
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 32
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 13,
+      "type": "KokoroSpeaker",
+      "pos": [
+        -531.9974365234375,
+        11.144536018371582
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "speaker",
+          "type": "KOKORO_SPEAKER",
+          "links": [
+            30
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KokoroSpeaker"
+      },
+      "widgets_values": [
+        "am_puck"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "KokoroGenerator",
+      "pos": [
+        -196.3094482421875,
+        9.349502563476562
+      ],
+      "size": [
+        337.76922607421875,
+        202.39346313476562
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "speaker",
+          "type": "KOKORO_SPEAKER",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            32,
+            33
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KokoroGenerator"
+      },
+      "widgets_values": [
+        "I am a synthesized robot",
+        1,
+        "en-us"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "Reroute",
+      "pos": [
+        168.69874572753906,
+        115.85997772216797
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "AUDIO",
+          "links": [
+            34
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    }
+  ],
+  "links": [
+    [
+      14,
+      3,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      8,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      26,
+      11,
+      1,
+      6,
+      1,
+      "AUDIO"
+    ],
+    [
+      27,
+      8,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      28,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      12,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      13,
+      0,
+      14,
+      0,
+      "KOKORO_SPEAKER"
+    ],
+    [
+      32,
+      14,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      33,
+      14,
+      0,
+      16,
+      0,
+      "*"
+    ],
+    [
+      34,
+      16,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000005,
+      "offset": {
+        "0": 957.1400756835938,
+        "1": 350.92303466796875
+      }
+    },
+    "node_versions": {
+      "ComfyUI-VideoHelperSuite": "cad87a17a3ff5e03c26cf55e4dc90397b5642503",
+      "ComfyUI-KJNodes": "28381262d197596eb2b4c9bcc361228a5dcef4cc",
+      "comfy-core": "0.3.13",
+      "ComfyUI-JoyHallo_wrapper": "6033e7513b038bf0ab39ae6e2509e7699a406d78",
+      "comfyui-kokoro": "743120d2e5eec4eb4503205f9f4a93d9b997d7f6"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
