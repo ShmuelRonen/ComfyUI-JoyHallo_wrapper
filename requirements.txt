@@ -1,6 +1,6 @@
 mediapipe[vision]==0.10.14
 mlflow
-moviepy
+moviepy==1.0.3
 omegaconf
 onnxruntime
 transformers
