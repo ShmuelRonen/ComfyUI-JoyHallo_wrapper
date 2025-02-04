@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ## Node Parameters
 
-- **inference_steps** (15-40): Controls generation quality and detail. Higher values give better quality but slower processing. Default: 40
+- **inference_steps** (10-40): Controls generation quality and detail. Higher values give better quality but slower processing. Default: 40
 
 - **cfg_scale** (1.0-5.0): Controls how closely the output follows the audio/motion guidance. Higher values create stronger motion but may look less natural. Default: 3.5
 
