@@ -45,13 +45,13 @@ git lfs install
 2. Download models to `ComfyUI/models/JOY/HALLO/`:
 ```bash
 # Base model
-git clone https://huggingface.co/fudan-generative-ai/hallo HALLO
+git clone https://huggingface.co/fudan-generative-ai/hallo pretrained_models
 
 # Wav2Vec model
-git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base HALLO/chinese-wav2vec2-base
+git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base
 
 # JoyHallo model
-git clone https://huggingface.co/jdh-algo/JoyHallo-v1 HALLO/JoyHallo-v1
+git clone https://huggingface.co/jdh-algo/JoyHallo-v1 pretrained_models/joyhallo
 ```
 
 Final structure should be:
