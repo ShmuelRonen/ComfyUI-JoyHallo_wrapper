@@ -62,8 +62,13 @@ ComfyUI/models/JOY/
     ├── chinese-wav2vec2-base/
     └── JoyHallo-v1/
 ```
+### Suggested environment
 
-
+```
+pytorch version: 2.4.0+cu121
+xformers version: 0.0.27.post2
+Python version: 3.12.7
+```
 ## Node Parameters
 
 - **inference_steps** (10-40): Controls generation quality and detail. Higher values give better quality but slower processing. Default: 40
