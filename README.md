@@ -56,7 +56,7 @@ Outputs:
 - audio: Synchronized audio
 
 ## Best Practices
-- Use portrait images with 1:1 aspect ratio for optimal results
+- Use portrait images with 1:1 or 3:2 aspect ratio for optimal results
 - Ensure clear facial features in reference image
 - Use clean audio input without background noise
 
