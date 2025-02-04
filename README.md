@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 
 2. Models:
-- On first run, models download automatically to `models/JOY/HALLO/`
+- On first run, models download automatically to `models/JOY/`
 - Required space: ~10GB
 
 ## Node Parameters
