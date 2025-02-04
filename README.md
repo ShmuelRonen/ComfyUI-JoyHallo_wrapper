@@ -30,8 +30,39 @@ pip install -r requirements.txt
 ```
 
 2. Models:
-- On first run, models download automatically to `models/JOY/`
+- On first run, models download automatically to `models/JOY/HALLO/`
 - Required space: ~10GB
+
+## Manual Model Installation
+
+If automatic download fails, you can manually install models:
+
+1. Install git-lfs:
+```bash
+git lfs install
+```
+
+2. Download models to `ComfyUI/models/JOY/HALLO/`:
+```bash
+# Base model
+git clone https://huggingface.co/fudan-generative-ai/hallo HALLO
+
+# Wav2Vec model
+git clone https://huggingface.co/TencentGameMate/chinese-wav2vec2-base HALLO/chinese-wav2vec2-base
+
+# JoyHallo model
+git clone https://huggingface.co/jdh-algo/JoyHallo-v1 HALLO/JoyHallo-v1
+```
+
+Final structure should be:
+```
+ComfyUI/models/JOY/
+└── HALLO/
+    ├── stable-diffusion-v1-5/
+    ├── chinese-wav2vec2-base/
+    └── JoyHallo-v1/
+```
+
 
 ## Node Parameters
 
