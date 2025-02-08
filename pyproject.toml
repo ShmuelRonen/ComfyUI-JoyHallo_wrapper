@@ -1,0 +1,15 @@
+[project]
+name = "joyhallo_wrapper"
+description = "A ComfyUI custom node wrapper for JoyHallo - One-Shot Audio-Driven Talking Head Generation."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["mediapipe[vision]==0.10.14", "mlflow", "moviepy==1.0.3", "omegaconf", "onnxruntime", "transformers", "av", "regex", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/ShmuelRonen/ComfyUI-JoyHallo_wrapper"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-JoyHallo_wrapper"
+Icon = ""
