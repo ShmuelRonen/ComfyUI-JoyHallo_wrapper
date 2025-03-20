@@ -1,5 +1,10 @@
 # ComfyUI-JoyHallo_wrapper
 
+## Support My Work
+If you find this project helpful, consider buying me a coffee:
+
+[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=shmuelronen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/shmuelronen)
+
 A ComfyUI custom node wrapper for [JoyHallo](https://github.com/jdh-algo/JoyHallo) - One-Shot Audio-Driven Talking Head Generation.
 
 #### Simple workflow
